@@ -51,6 +51,7 @@ a:hover{text-decoration:underline}
     .banner_1{background: url("../images/p1.jpg") no-repeat; height: 875px; }
     .banner_prev{position: absolute; top: 50%; margin-top: -65px; left: 300px;}
     .banner_next{ position: absolute; top: 50%;margin-top: -65px;  right: 300px;}
+    .banner_dot a{display: inline-block}
 
 
     /*===== 产品介绍 =====*/
