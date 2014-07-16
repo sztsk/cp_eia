@@ -19,39 +19,45 @@ a:hover{text-decoration:underline}
 .layout{ width: 1002px; margin: 0 auto;}
 .page{margin-bottom: 160px;}
 
-.b3{ width: 41px; height: 40px; background: url("../imgs/b3.png")}
-.b4{ width: 41px; height: 40px; background: url("../imgs/b4.png")}
-.b11{background: url("../imgs/b11.png") no-repeat; width: 963px; height: 65px;}
-.b12{background: url("../imgs/b12.png") no-repeat; width: 975px; height: 64px;}
-.b13{width: 145px; height: 31px; background: url("../imgs/b13.png")}
-.b14{ width: 84px; height: 129px; background: url("../imgs/b14.png")}
-.b15{ width: 84px; height: 129px; background: url("../imgs/b15.png")}
-.b16{background: url("../imgs/b16.png")}
+/*.b3{ width: 41px; height: 40px; background: url("../imgs/b3.png")}*/
+/*.b4{ width: 41px; height: 40px; background: url("../imgs/b4.png")}*/
+/*.b11{background: url("../imgs/b11.png") no-repeat; width: 963px; height: 65px;}*/
+/*.b12{background: url("../imgs/b12.png") no-repeat; width: 975px; height: 64px;}*/
+/*.b13{width: 145px; height: 31px; background: url("../imgs/b13.png")}*/
+/*.b14{ width: 84px; height: 129px; background: url("../imgs/b14.png")}*/
+/*.b15{ width: 84px; height: 129px; background: url("../imgs/b15.png")}*/
+/*.b16{background: url("../imgs/b16.png")}*/
 
 .header{height: 1030px; background: url("../images/bg.jpg") no-repeat; background-size: cover;}
 .header_nav{ position: absolute; bottom: 0; left: 50%; margin-left: -481px;}
-.header_nav ul{margin: 0 60px;}
-.header_nav li{ width: 208px; height: 65px; line-height: 65px; text-align: center; float: left;}
-.header_nav a{display: block; color: #fff; font-size: 20px;}
+.header_nav div{margin: 0 60px;}
+.header_nav a{ width: 208px; height: 65px; line-height: 65px; text-align: center; float: left;display: block; color: #fff; font-size: 20px;}
 
 
 /*===== banner =====*/
-.navs{}
-    .navs_inner{ width: 975px; margin: 0 auto}
+.navs2{height: 155px; overflow: hidden;}
+.navs{ position: relative; width: 100%; left: 0;background: #fff;}
+.navs_fixed{position: fixed; top: 0; z-index: 10;}
+    .navs_inner{ width: 964px; margin: 0 auto}
     .navs_logo{}
-    .navs_list{margin: 20px auto;}
-    .navs_list li{ float: left; width: 145px; height: 31px; line-height: 31px; text-align: center; margin-right: 85px;}
-    .navs_list a{display: block; font-size: 24px; color: #2aacff;}
+    .navs_list{padding: 30px 0 30px 80px;}
+    .navs_list a{display: inline-block;width: 145px; height: 31px; line-height: 31px; text-align: center; margin-right: 85px; font-size: 24px; color: #2aacff;}
+    .navs_list a.last{margin-right: 0}
     .navs_list a:hover,
     .navs_list a.selected{background: url("../imgs/b13.png"); color: #fff; text-decoration: none; }
 
 
     /*===== banner =====*/
-    .banner{position: relative;}
+    .banner{position: relative; height: 1000px;}
+    .banner_logo{position: relative; z-index: 2; left: 50%; margin-left:-470px; top: 59px;}
+    /*.banner_slider{ width: 100%;}*/
+    .banner_slider li{ width: 100%; height: 875px; background-repeat: no-repeat}
     .banner_1{background: url("../images/p1.jpg") no-repeat; height: 875px; }
-    .banner_prev{position: absolute; top: 50%; margin-top: -65px; left: 300px;}
-    .banner_next{ position: absolute; top: 50%;margin-top: -65px;  right: 300px;}
-    .banner_dot a{display: inline-block}
+    .banner_prev{position: absolute; top: 50%; margin-top: -65px; left: 300px; z-index: 2;}
+    .banner_next{ position: absolute; top: 50%;margin-top: -65px;  right: 300px; z-index: 2;}
+    .banner_dot{ position: relative; z-index: 2;top: 35px; left: 50%; margin-left: -242px; width: 530px;}
+    .banner_dot a{display: inline-block; margin-right: 15px;}
+    .banner_flash{ width: 1200px; margin: 240px auto 0 auto}
 
 
     /*===== 产品介绍 =====*/
@@ -61,8 +67,9 @@ a:hover{text-decoration:underline}
         .pro_nav a{display: inline-block; margin-left: 15px;}
         .pro_list{margin-top: 30px; width: 1300px;}
         .pro_list li{ width: 300px; float: left; margin-right: 50px;}
-            .pro_info{display: block; border: 1px solid #dedede; padding-bottom: 25px;}
+            .pro_info{display: block; position: relative; border: 1px solid #dedede; padding-bottom: 25px;}
             .pro_info img{ width: 298px; height: 200px; display: block;}
+            .pro_info b{position: absolute; top: 20px; right: 20px; cursor: pointer}
                 .pro_stit{font-size: 18px; text-align: center; color: #aaa; font-weight: 400;}
             .pro_cnt{ width: 1090px; overflow: hidden;}
             .pro_action{ margin: 20px auto 40px auto;}
@@ -107,3 +114,9 @@ a:hover{text-decoration:underline}
     /*===== 联系我们 =====*/
 .contact{ width: 816px; margin: 0 auto}
 .contact_hd{margin: 0 auto}
+
+
+/*===== 返回顶部 =====*/
+.top{position: fixed; z-index: 20; right: 200px; bottom: 100px; width: 90px; height: 200px; }
+.top a{position: absolute; left: 54px; top: 58px; z-index: 1; width: 100%; height: 200px;}
+    .top_bg{position: absolute; top: 73px; left: 64px;}
