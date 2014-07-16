@@ -1,0 +1,15 @@
+{
+    "name": "eia",
+    "version": "0.1.0",
+    "author": "hugohua",
+    "devDependencies": {
+        "matchdep": "~0.3.0",
+        "grunt": "~0.4.1",
+        "grunt-contrib-clean":"*",
+        "grunt-contrib-concat": "~0.3.0",
+        "grunt-contrib-uglify": "~0.2.1",
+        "grunt-contrib-copy": "*",
+        "grunt-contrib-connect":"*",
+        "grunt-css-combo":"*"
+    }
+}
