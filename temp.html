@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SUN</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <style>
+        body{background: #ccc;}
+        .sun{position: absolute; top: 200px; left: 200px;}
+        .sun{background: url("images/index/1.png") no-repeat; width: 218px; height: 215px;}
+        .sun{
+            -webkit-backface-visibility:visible;
+            -webkit-transform-origin:center center;
+            -webkit-animation:sunrun 6s 0s infinite linear normal none ;
+        }
+        @-webkit-keyframes sunrun{
+              0%{
+                  -webkit-transform:rotateZ(0deg);
+              } 100%{
+                    -webkit-transform:rotateZ(360deg);
+                }
+          }
+
+        .cloud{ background: url("imgs/b32.png") no-repeat; width: 121px; height: 63px; position: absolute; right: 900px; top: 300px;}
+        .cloud{
+
+            -webkit-backface-visibility:visible;
+            -webkit-transform-origin:center center;
+            -webkit-animation:cloudrun 6s 0s infinite ease alternate none ;
+        } @-webkit-keyframes cloudrun{
+              0%{
+                  -webkit-transform:translate3d(0,0,0);
+              } 100%{
+                    -webkit-transform:translate3d(-600px,-50px,0);
+                }
+          }
+
+
+
+          /*===== 翻转效果 =====*/
+        .flip{-webkit-perspective:1000;-webkit-transform-style:preserve-3d;}
+        .flip:hover .flip_back{-webkit-transform:rotateY(0deg);}
+        .flip:hover .flip_front{-webkit-transform:rotateY(180deg);}
+
+        .flip_item{-webkit-transition:0.6s;
+-webkit-transform-style:preserve-3d;position:relative;cursor:pointer; width: 103px; height: 103px; display: block}
+        .flip_back,.flip_front{width:100%;-webkit-backface-visibility:hidden;-webkit-transition:.6s;-webkit-transform-style:preserve-3d;position:absolute;top:300px;left:600px}
+        .flip_front{-webkit-transform:rotateY(0deg);z-index:2}
+        .flip_back{-webkit-transform:rotateY(-180deg);}
+    </style>
+</head>
+<body>
+
+    <div class="sun">
+        
+    </div>
+
+    <div class="cloud"></div>
+
+<div class="flip">
+    <a href="http://www.lisawatch.com" class="flip_item">
+        <b class="i1 flip_back"></b>
+        <b class="i1 flip_front"></b>
+    </a>
+</div>
+
+</body>
+</html>
