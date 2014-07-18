@@ -109,6 +109,10 @@ Pui.add('index',function(exports,P){
             yparallax: false
         });
 
+        $('#J_pao').parallax({
+            mouseport: jQuery("#J_header")
+        });
+
 
     }
 

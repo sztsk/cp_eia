@@ -140,7 +140,7 @@
                             top: scrolls + that.top
                         });
                     }
-                    console.log($(window).scrollTop());
+//                    console.log($(window).scrollTop());
                     
                     //是否支持sticky
                     if(that.options.sticky){
@@ -226,6 +226,9 @@
             $(this.options.cssSlide).each(function(i){
                 var $this = $(this),
                     top = $this.offset().top + that.options.offset;
+                if(i==0){
+                    top = $this.offset().top -110 ;
+                }
 //                console.log(top);
                 
                 arr.push(top);

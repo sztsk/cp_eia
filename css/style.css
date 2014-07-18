@@ -261,11 +261,11 @@ a:hover{text-decoration:underline}
     /*===== 弹出层 =====*/
 .pop{background: url("../images/pop/1.png"); width: 670px; height: 481px; position: fixed; top: 50%; left: 50%; margin: -240px  0 0 -335px; z-index: 100; display: none}
 .pop_close{position: absolute; width: 120px; height: 120px; top: 50px; right: 50px;}
-.pop_mask{opacity: 0.8; background: #fff; z-index: 99; position: fixed; top: 0; left: 0; bottom: 0; right: 0; display: none}
+.pop_mask{opacity: 0.8;filter:alpha(opacity=80); background: #fff; z-index: 99; position: fixed; top: 0; left: 0; bottom: 0; right: 0; display: none}
 
 .pop2{background: url("../images/certificate/11.png"); width: 541px; height: 711px; position: fixed; top: 50%; left: 50%; margin: -355px  0 0 -270px; z-index: 100; display: none}
 .pop_close2{position: absolute; width: 120px; height: 120px; top: 0px; right: 0px;}
-.pop_mask{opacity: 0.8; background: #fff; z-index: 99; position: fixed; top: 0; left: 0; bottom: 0; right: 0; display: none}
+.pop_mask{opacity: 0.8;filter:alpha(opacity=80); background: #fff; z-index: 99; position: fixed; top: 0; left: 0; bottom: 0; right: 0; display: none}
 
 
 /*===== 地图 =====*/
@@ -429,3 +429,5 @@ a:hover{text-decoration:underline}
 .page2{ height: 1599px;}
 .page3{ height: 2665px;}
 .page4{ height: 1045px;}
+
+.pao{position: absolute; top: 0; left: 0; background: url("../images/index/p1.png"); width: 90%; height: 1000px;}
