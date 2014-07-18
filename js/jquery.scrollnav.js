@@ -85,6 +85,7 @@
             cssSlide && ( this.options.cssSlide = cssSlide );
             // 将所有屏数的坐标值存进数组
             this.offsets = this.getPageOffset();
+//            this.offsets = [743,1749,3546,6392];
             // 获取插件目前所在的位置（用于IE6无法使用fiexd的设置）
             this.top = this.$el.offset().top;
             //判断是否在动画中
@@ -139,7 +140,8 @@
                             top: scrolls + that.top
                         });
                     }
-
+                    console.log($(window).scrollTop());
+                    
                     //是否支持sticky
                     if(that.options.sticky){
                         var y = $win.scrollTop();
@@ -224,6 +226,8 @@
             $(this.options.cssSlide).each(function(i){
                 var $this = $(this),
                     top = $this.offset().top + that.options.offset;
+//                console.log(top);
+                
                 arr.push(top);
             });
             return arr;

@@ -16,6 +16,25 @@
             <a href="javascript:;">Contact</a>
         </div>
     </div>
+
+    <b class="b20 header_ico"></b>
+    <div id="J_px" class="bg">
+        <div class="c c1_1 c1" style="top: 100px;
+    left: 10px; width: 300px; height: 400px;"></div>
+        <div class="c c1_2 c2" style="top: 200px;
+    right: 50px; width: 500px; height: 600px;"></div>
+        <div class="c c1_3 c3" style="top: 300px;
+    left: 200px;"></div>
+        <div class="c c2_1 c4" style="top: 333px; left: 333px;"></div>
+        <div class="c c2_2 c5"></div>
+        <!--<div class="c c2_3 c6"></div>-->
+        <!--<div class="c c3_1 c7"></div>-->
+        <!--<div class="c c3_2 c8"></div>-->
+        <!--<div class="c c3_3 c9"></div>-->
+        <!--<div class="c c3_2 c10"></div>-->
+        <!--<div class="c c1_2 c11"></div>-->
+        <!--<div class="c c2_2 c12"></div>-->
+    </div>
 </div>
 
 <div class="navs2">
@@ -23,10 +42,22 @@
         <div class="navs_inner">
             <h1 class="navs_logo b12"></h1>
             <div class="navs_list clear">
-                <a href="javascript:;" class="selected">Company</a>
-                <a href="javascript:;">Products</a>
-                <a href="javascript:;">About</a>
-                <a href="javascript:;" class="last">Contact</a>
+                <a href="javascript:;" class="selected">
+                    <span class="en">Company</span>
+                    <span class="zh">首页</span>
+                </a>
+                <a href="javascript:;">
+                    <span class="en">Products</span>
+                    <span class="zh">产品</span>
+                </a>
+                <a href="javascript:;">
+                    <span class="en">About</span>
+                    <span class="zh">关于我们</span>
+                </a>
+                <a href="javascript:;" class="last">
+                    <span class="en">Contact</span>
+                    <span class="zh">联系我们</span>
+                </a>
             </div>
         </div>
     </div>
@@ -35,24 +66,87 @@
 <div class="page page1">
     <div id="J_banner" class="banner">
         <ul class="banner_slider">
-            <li class="banner_1" style="background-image: url(images/slider/1.jpg)">
+            <li class="banner_1 banner_li" style="background-image: url(images/slider/1.jpg)">
+                <div class="banner_inner">
+                    <div class="sun"></div>
+                    <div class="cloud2 b31"></div>
+                    <div class="cloud b32"></div>
+                </div>
             </li>
-            <li class="banner_2" style="background-image: url(images/slider/2.jpg)">
+            <li class="banner_2 banner_li" style="background-image: url(images/slider/2.jpg)">
                 <div id="J_flash" class="banner_flash" >
-                    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1200" height="600" id="J_game" align="middle">
+                    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1080" height="200" id="J_game" align="middle">
                         <param name="movie" value="images/flash/slider.swf" />
 
                         <param name="quality" value="high" />
+                        <param name="wmode" value="transparent" />
                         <param name="allowScriptAccess" value="always" />
                         <embed name="J_game" src="images/flash/slider.swf"
-                                width="1200" height="600"
+                               wmode="transparent" width="1080" height="200"
                                allowScriptAccess="always" align="middle" type="application/x-shockwave-flash"
                                pluginspage="http://www.adobe.com/go/getflashplayer">
                     </object>
                 </div>
 
             </li>
-            <li class="banner_3" style="background-image: url(images/slider/3.jpg)">
+            <li class="banner_3 banner_li">
+                <div class="banner_inner">
+                    <div class="banner_3tit"></div>
+                    <div id="J_map" class="map">
+                        <b class="map_city benelux">BENELUX</b>
+                        <b class="map_city france">FRANCE</b>
+                        <b class="map_city bulgaria">BULGARIA</b>
+                        <b class="map_city turkey">TURKEY</b>
+                        <b class="map_city china">CHINA</b>
+                        <b class="map_city japan">JAPAN</b>
+                        <b class="map_city hongkong">HONGKONG</b>
+                        <b class="map_city malaysia">MALAYSIA</b>
+                        <b class="map_city singapore">SINGAPORE</b>
+                        <b class="map_city australia">AUSTRALIA</b>
+                        <b class="map_city newzealand">NEW ZEALAND</b>
+                        <b class="map_city usa">USA</b>
+                    </div>
+                    <div id="J_scroll" class="scroll">
+                        <ul id="J_scrollList" class="scroll_list clear">
+                            <li class="grow selected" data-city="benelux">
+                                <img src="images/city/1.jpg" alt="图片名称" />
+                            </li>
+                            <li class="grow" data-city="france">
+                                <img src="images/city/2.jpg" alt="图片名称" />
+                            </li>
+                            <li class="grow"  data-city="bulgaria">
+                                <img src="images/city/3.jpg" alt="图片名称" />
+                            </li>
+                            <li class="grow" data-city="turkey">
+                                <img src="images/city/4.jpg" alt="图片名称" />
+                            </li>
+                            <li class="grow" data-city="china">
+                                <img src="images/city/5.jpg" alt="图片名称" />
+                            </li>
+                            <li class="grow" data-city="japan">
+                                <img src="images/city/6.jpg" alt="图片名称" />
+                            </li>
+                            <li class="grow selected" data-city="benelux">
+                                <img src="images/city/7.jpg" alt="图片名称" />
+                            </li>
+                            <li class="grow" data-city="france">
+                                <img src="images/city/8.jpg" alt="图片名称" />
+                            </li>
+                            <li class="grow" data-city="bulgaria">
+                                <img src="images/city/9.jpg" alt="图片名称" />
+                            </li>
+                            <li class="grow" data-city="turkey">
+                                <img src="images/city/10.jpg" alt="图片名称" />
+                            </li>
+                            <li class="grow" data-city="china">
+                                <img src="images/city/11.jpg" alt="图片名称" />
+                            </li>
+                            <li class="grow" data-city="japan">
+                                <img src="images/city/12.jpg" alt="图片名称" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </li>
         </ul>
         <div class="banner_logo breadc"></div>
@@ -66,18 +160,44 @@
     </div>
 </div>
 <!--page1-->
-
+<div class="line"></div>
 <!--page2 产品列表-->
 <div class="page page2">
     <div class="pro">
         <div class="pro_hd clear">
             <h3 class="pro_tit b16"><span class="hide">产品介绍</span></h3>
             <div class="pro_nav">
-                <a href="javascript:;" class="i1"><span class="hide">MOTHERS</span></a>
-                <a href="javascript:;" class="i2"><span class="hide">MOTHERS</span></a>
-                <a href="javascript:;" class="i3"><span class="hide">MOTHERS</span></a>
-                <a href="javascript:;" class="i4"><span class="hide">MOTHERS</span></a>
-                <a href="javascript:;" class="i5"><span class="hide">MOTHERS</span></a>
+                <div class="flip">
+                    <a href="javascript:;" class="flip_item">
+                        <b class="i1 flip_back"></b>
+                        <b class="i11 flip_front"></b>
+                    </a>
+                </div>
+                <div class="flip">
+                    <a href="javascript:;" class="flip_item">
+                        <b class="i2 flip_back"></b>
+                        <b class="i22 flip_front"></b>
+                    </a>
+                </div>
+                <div class="flip">
+                    <a href="javascript:;" class="flip_item">
+                        <b class="i3 flip_back"></b>
+                        <b class="i33 flip_front"></b>
+                    </a>
+                </div>
+                <div class="flip">
+                    <a href="javascript:;" class="flip_item">
+                        <b class="i4 flip_back"></b>
+                        <b class="i44 flip_front"></b>
+                    </a>
+                </div>
+                <div class="flip">
+                    <a href="javascript:;" class="flip_item">
+                        <b class="i5 flip_back"></b>
+                        <b class="i55 flip_front"></b>
+                    </a>
+                </div>
+
             </div>
         </div>
         <div class="pro_bd">
@@ -89,7 +209,7 @@
                             <img src="images/goods.jpg" alt="图片名称" />
                             <h4 class="pro_stit">Meal plate with Lid</h4>
                             <h4 class="pro_stit">玉米餐具玉米餐具</h4>
-                            <b class="b2"></b>
+                            <b class="b2 J_pop"></b>
                         </div>
                         <div class="pro_action clear">
                             <a class="pro_link b17" href="javascript:;"><span class="hide">网店链接</span></a>
@@ -104,7 +224,7 @@
                             <img src="images/goods.jpg" alt="图片名称" />
                             <h4 class="pro_stit">Meal plate with Lid</h4>
                             <h4 class="pro_stit">玉米餐具玉米餐具</h4>
-                            <b class="b2"></b>
+                            <b class="b2 J_pop"></b>
                         </div>
                         <div class="pro_action clear">
                             <a class="pro_link b17" href="javascript:;"><span class="hide">网店链接</span></a>
@@ -119,7 +239,7 @@
                             <img src="images/goods.jpg" alt="图片名称" />
                             <h4 class="pro_stit">Meal plate with Lid</h4>
                             <h4 class="pro_stit">玉米餐具玉米餐具</h4>
-                            <b class="b2"></b>
+                            <b class="b2 J_pop"></b>
                         </div>
                         <div class="pro_action clear">
                             <a class="pro_link b17" href="javascript:;"><span class="hide">网店链接</span></a>
@@ -134,7 +254,7 @@
                             <img src="images/goods.jpg" alt="图片名称" />
                             <h4 class="pro_stit">Meal plate with Lid</h4>
                             <h4 class="pro_stit">玉米餐具玉米餐具</h4>
-                            <b class="b2"></b>
+                            <b class="b2 J_pop"></b>
                         </div>
                         <div class="pro_action clear">
                             <a class="pro_link b17" href="javascript:;"><span class="hide">网店链接</span></a>
@@ -149,7 +269,7 @@
                             <img src="images/goods.jpg" alt="图片名称" />
                             <h4 class="pro_stit">Meal plate with Lid</h4>
                             <h4 class="pro_stit">玉米餐具玉米餐具</h4>
-                            <b class="b2"></b>
+                            <b class="b2 J_pop"></b>
                         </div>
                         <div class="pro_action clear">
                             <a class="pro_link b17" href="javascript:;"><span class="hide">网店链接</span></a>
@@ -164,7 +284,7 @@
                             <img src="images/goods.jpg" alt="图片名称" />
                             <h4 class="pro_stit">Meal plate with Lid</h4>
                             <h4 class="pro_stit">玉米餐具玉米餐具</h4>
-                            <b class="b2"></b>
+                            <b class="b2 J_pop"></b>
                         </div>
                         <div class="pro_action clear">
                             <a class="pro_link b17" href="javascript:;"><span class="hide">网店链接</span></a>
@@ -179,7 +299,7 @@
                             <img src="images/goods.jpg" alt="图片名称" />
                             <h4 class="pro_stit">Meal plate with Lid</h4>
                             <h4 class="pro_stit">玉米餐具玉米餐具</h4>
-                            <b class="b2"></b>
+                            <b class="b2 J_pop"></b>
                         </div>
                         <div class="pro_action clear">
                             <a class="pro_link b17" href="javascript:;"><span class="hide">网店链接</span></a>
@@ -194,7 +314,7 @@
                             <img src="images/goods.jpg" alt="图片名称" />
                             <h4 class="pro_stit">Meal plate with Lid</h4>
                             <h4 class="pro_stit">玉米餐具玉米餐具</h4>
-                            <b class="b2"></b>
+                            <b class="b2 J_pop"></b>
                         </div>
                         <div class="pro_action clear">
                             <a class="pro_link b17" href="javascript:;"><span class="hide">网店链接</span></a>
@@ -209,7 +329,7 @@
                             <img src="images/goods.jpg" alt="图片名称" />
                             <h4 class="pro_stit">Meal plate with Lid</h4>
                             <h4 class="pro_stit">玉米餐具玉米餐具</h4>
-                            <b class="b2"></b>
+                            <b class="b2 J_pop"></b>
                         </div>
                         <div class="pro_action clear">
                             <a class="pro_link b17" href="javascript:;"><span class="hide">网店链接</span></a>
@@ -232,7 +352,7 @@
     </div>
 </div>
 
-
+<div class="line"></div>
 <!--page3 关于我们-->
 <div class="page page3">
     <div class="about">
@@ -297,6 +417,7 @@
                     </ul>
                 </div>
             </div>
+            <div class="line"></div>
             <div class="media">
                 <h4 class="media_hd b8"><span class="hide">媒体报道</span></h4>
                 <div class="media_bd clear">
@@ -318,7 +439,7 @@
 
 
 <!--page4 联系我们-->
-
+<div class="line"></div>
 <div class="page page4">
     <div class="contact">
         <h3 class="contact_hd b9"><span class="hide">联系我们</span></h3>
@@ -343,16 +464,45 @@
             <param name="wmode" value="transparent" />
             <param name="allowScriptAccess" value="always" />
             <embed name="J_game" src="images/flash/top.swf"
-                   wmode="transparent" width="200" height="400"
+                   wmode="transparent" width="90" height="200"
                    allowScriptAccess="always" align="middle" type="application/x-shockwave-flash"
                    pluginspage="http://www.adobe.com/go/getflashplayer">
         </object>
     </div>
 </div>
 
+<div class="pop" style="display: none">
+    <div class="pop_col1">
+        <div class="pop_bimg">
+            <img src="http://img.qian-duan-she-ji.us/470" alt="图片名称" />
+        </div>
+        <div class="pop_simg">
+            <a href="##"><img src="http://img.qian-duan-she-ji.us/100" alt="图片名称" /></a>
+            <a href="##"><img src="http://img.qian-duan-she-ji.us/100" alt="图片名称" /></a>
+            <a href="##"><img src="http://img.qian-duan-she-ji.us/100" alt="图片名称" /></a>
+        </div>
+    </div>
+    <div class="pop_col2">
+
+    </div>
+</div>
+
+<div id="J_pop" class="pop">
+    <a id="J_popClose" class="pop_close" href="##"></a>
+</div>
+
+<div id="J_pop2" class="pop2">
+    <a id="J_popClose2" class="pop_close2" href="##"></a>
+</div>
+
+<div id="J_popMask" class="pop_mask"></div>
+
 <script src="js/libs/jquery-1.11.1.min.js"></script>
-<script src="js/libs/pui.js"></script>
-<script src="js/libs/jquery.scrollnav.js"></script>
+<script src="js/pui.js"></script>
+<script src="js/jquery.scrollnav.js"></script>
+<script src="js/jquery.lazyload.js"></script>
+<script src="js/jquery.slider.js"></script>
+<script src="js/jquery.parallax.js"></script>
 <script src="js/index.js"></script>
 </body>
 </html>
