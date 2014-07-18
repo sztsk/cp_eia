@@ -109,9 +109,11 @@ Pui.add('index',function(exports,P){
             yparallax: false
         });
 
-        $('#J_pao').parallax({
+        $('#J_pao,#J_pao2').parallax({
             mouseport: jQuery("#J_header")
-        });
+        },
+            { xparallax: '12%',    yparallax: '12%' },      // Layer 1
+            { xparallax: '50%',   yparallax: 'center' });
 
 
     }
