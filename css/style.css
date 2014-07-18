@@ -184,7 +184,7 @@ a:hover{text-decoration:underline}
 
 
 
-.header{height: 1030px; background: url("../images/bg.jpg") no-repeat; background-size: cover; position: relative;}
+.header{height: 1030px; background: url("../images/bg.jpg") no-repeat; background-size: cover; position: relative; overflow: hidden;}
 
 .header_ico{position: absolute; right: 30px; bottom: 30px; }
 
@@ -244,13 +244,13 @@ a:hover{text-decoration:underline}
 
     /*.banner_slider{ width: 100%;}*/
 
-    .banner_li{ width: 100%; height: 875px; background-repeat: no-repeat}
+    .banner_li{ width: 100%; height: 875px; background-repeat: no-repeat; background-position: top center}
 
-    .banner_1{background: url("../images/p1.jpg") no-repeat; height: 875px; }
+    .banner_1{height: 875px; }
 
-    .banner_prev{position: absolute; top: 50%; margin-top: -65px; left: 300px; z-index: 2;}
+    .banner_prev{position: absolute; top: 50%; margin-top: -65px; left: 100px; z-index: 2;}
 
-    .banner_next{ position: absolute; top: 50%;margin-top: -65px;  right: 300px; z-index: 2;}
+    .banner_next{ position: absolute; top: 50%;margin-top: -65px;  right: 100px; z-index: 2;}
 
     .banner_dot{ position: relative; z-index: 2;top: 35px; left: 50%; margin-left: -242px; width: 530px;}
 
@@ -862,5 +862,5 @@ a:hover{text-decoration:underline}
 
 
 
-.pao{position: absolute; top: 0; left: 0; background: url("../images/index/p2.png"); width:1694px; height: 865px;}
-.pao2{position: absolute; top: 0; left: 0; background: url("../images/index/p3.png"); width:1694px; height: 865px;}
+.pao{position: absolute; top: 0; left: 0; background: url("../images/index/p2.png"); width:1694px; height: 900px;}
+.pao2{position: absolute; top: 0; left: 0; background: url("../images/index/p3.png"); width:1694px; height: 900px;}
