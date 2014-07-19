@@ -4,9 +4,22 @@
 Pui.add('index',function(exports,P){
 
     var $win = P.$win,
-
         $navs = $('#J_navs'),
         scrollDom = (P.detector.engine === 'webkit') ? "body": "html";
+
+    var $modalCnt = $('#J_modalCnt');
+
+    /**
+     * 添加头标签 浏览器检测
+     */
+    var browserCheck = function(){
+        var css3 = P.supports("Transition") ? "transitions": "notransitions",
+            css3 = P.supports("animation") ? css3 + " animations": css3 + " noanimations",
+            detector = P.detector,
+            version = detector.version ? 'ie'+ detector.version : '';
+
+        $("html").addClass( css3 + " " + detector.os + " " + detector.engine + " " + detector.browser + " " + version);
+    };
 
     var headerInit = function(){
         var $height = $('#J_header'),
@@ -66,20 +79,30 @@ Pui.add('index',function(exports,P){
     };
 
     var popDetail = function(){
-        $('.J_pop').on('click',function(){
-            $('#J_pop,#J_popMask').show();
-        })
-        $('#J_popClose').on('click',function(){
-            $('#J_pop,#J_popMask').hide();
+
+
+        $('#J_cert').find('.effeckt-modal-button').on('click.index',function(){
+            var img = $(this).attr('href');
+            $modalCnt.html('<img src="'+ img +'" />')
+        });
+
+        var tpl = $('#J_popTpl').html(),
+            $warp = $('#J_popCnt'),
+            $list = $('#J_proList');
+        $list.on('click','.J_pop',function(){
+            var proId = $(this).attr('data-id');
+            $warp.html(tpl);
+        });
+
+        //商品图切换
+        $warp.on('mouseenter','.J_sImg',function(){
+            var $this = $(this),
+                bImg = $this.attr('href');
+            $warp.find('.J_bImg').attr('src',bImg);
+            $this.addClass('selected').siblings('a').removeClass('selected');
+            return false;
         })
 
-        $('.cert_view').on('click',function(){
-            $('#J_pop2,#J_popMask').show();
-        })
-
-        $('#J_popClose2').on('click',function(){
-            $('#J_pop2,#J_popMask').hide();
-        })
     };
 
     var scroll = function(){
@@ -93,33 +116,31 @@ Pui.add('index',function(exports,P){
     };
 
     var parallax = function(){
-//        $('.c').parallax(
-//            { mouseport: jQuery('#J_header') },                    // Options
-//            { xparallax: '12%',    yparallax: '12%' },      // Layer 1
-//            { xparallax: '50%',   yparallax: 'center' },     // Layer 2
-//            { xparallax: 'left',   yparallax: 'top' },     // Layer 3
-//            { xparallax: '30%',   yparallax: '40%' },     // Layer 4
-//            { xparallax: '984px',   yparallax: '384px' },     // Layer 5
-//            { xparallax: '12%',  yparallax: '12%' })     // Layer 6);
-
-
         // Declare parallax on layers
         $('#J_scrollList').parallax({
             mouseport: jQuery("#J_scroll"),
             yparallax: false
         });
 
-        $('#J_pao,#J_pao2').parallax({
-            mouseport: jQuery("#J_header")
-        },
-            { xparallax: '12%',    yparallax: '12%' },      // Layer 1
-            { xparallax: '50%',   yparallax: 'center' });
+//        $('#J_pao,#J_pao2').parallax({
+//            mouseport: jQuery("#J_header")
+//        },{ xparallax: '12%',    yparallax: '12%' },      // Layer 1
+//            { xparallax: '50%',   yparallax: 'center' }
+//        );
 
 
-    }
+    };
+
+    var lazyLoad = function(){
+        $(document).lazyloader({
+            effect : "fadeIn",
+            dynamic: false
+        })
+    };
 
 
     exports.init  = function(){
+        browserCheck();
         headerInit();
         scrollInit();
         sliderInit();
@@ -127,6 +148,10 @@ Pui.add('index',function(exports,P){
         popDetail();
         scroll();
         parallax();
+    };
+
+    exports.lazyInit = function(){
+        lazyLoad();
     }
 
 

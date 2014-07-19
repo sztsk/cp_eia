@@ -117,11 +117,13 @@
                 var item = $(this), src, tagName = this.tagName.toLowerCase();
                 if (self._isInViewport(item)) {
                     src = item.attr(attr);
+                    item.hide();
                     if (tagName === 'img' || tagName === 'iframe') {
                         item.attr('src', src).removeAttr(attr);
                     } else {
                         item.css('background-image', 'url(' + src + ')').removeAttr(attr);
-                    }   
+                    }
+                    item.fadeIn();
                 }
             });
         },

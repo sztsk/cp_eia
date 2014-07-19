@@ -9,11 +9,23 @@
 <!--头部大图-->
 <div id="J_header" class="header">
     <div class="header_nav b11">
-        <div id="J_triggerNavs" class="clear">
-            <a href="javascript:;">Company</a>
-            <a href="javascript:;">Products</a>
-            <a href="javascript:;">About</a>
-            <a href="javascript:;">Contact</a>
+        <div id="J_triggerNavs" class="header_nav_inner clear">
+            <a href="javascript:;">
+                <span class="en">Company</span>
+                <span class="zh">首页</span>
+            </a>
+            <a href="javascript:;">
+                <span class="en">Products</span>
+                <span class="zh">产品</span>
+            </a>
+            <a href="javascript:;">
+                <span class="en">About</span>
+                <span class="zh">关于我们</span>
+            </a>
+            <a href="javascript:;" class="last">
+                <span class="en">Contact</span>
+                <span class="zh">联系我们</span>
+            </a>
         </div>
     </div>
 
@@ -21,23 +33,7 @@
 
     <div id="J_pao" class="pao"></div>
     <div id="J_pao2" class="pao2"></div>
-    <!--<div id="J_px" class="bg">-->
-        <!--<div class="c c1_1 c1" style="top: 100px;-->
-    <!--left: 10px; width: 300px; height: 400px;"></div>-->
-        <!--<div class="c c1_2 c2" style="top: 200px;-->
-    <!--right: 50px; width: 500px; height: 600px;"></div>-->
-        <!--<div class="c c1_3 c3" style="top: 300px;-->
-    <!--left: 200px;"></div>-->
-        <!--<div class="c c2_1 c4" style="top: 333px; left: 333px;"></div>-->
-        <!--<div class="c c2_2 c5"></div>-->
-        <!--&lt;!&ndash;<div class="c c2_3 c6"></div>&ndash;&gt;-->
-        <!--&lt;!&ndash;<div class="c c3_1 c7"></div>&ndash;&gt;-->
-        <!--&lt;!&ndash;<div class="c c3_2 c8"></div>&ndash;&gt;-->
-        <!--&lt;!&ndash;<div class="c c3_3 c9"></div>&ndash;&gt;-->
-        <!--&lt;!&ndash;<div class="c c3_2 c10"></div>&ndash;&gt;-->
-        <!--&lt;!&ndash;<div class="c c1_2 c11"></div>&ndash;&gt;-->
-        <!--&lt;!&ndash;<div class="c c2_2 c12"></div>&ndash;&gt;-->
-    <!--</div>-->
+
 </div>
 
 <div class="navs2">
@@ -45,21 +41,30 @@
         <div class="navs_inner">
             <h1 class="navs_logo b12"></h1>
             <div class="navs_list clear">
-                <a href="javascript:;" class="selected">
-                    <span class="en">Company</span>
-                    <span class="zh">首页</span>
+                <a href="javascript:;" class="navs_effect">
+                    <span>
+                        <b>Company</b>
+                        <i>首页</i>
+                    </span>
                 </a>
-                <a href="javascript:;">
-                    <span class="en">Products</span>
-                    <span class="zh">产品</span>
+
+                <a href="javascript:;" class="navs_effect">
+                    <span>
+                        <b>Products</b>
+                        <i>产品</i>
+                    </span>
                 </a>
-                <a href="javascript:;">
-                    <span class="en">About</span>
-                    <span class="zh">关于我们</span>
+                <a href="javascript:;" class="navs_effect">
+                    <span>
+                        <b>About</b>
+                        <i>关于我们</i>
+                    </span>
                 </a>
-                <a href="javascript:;" class="last">
-                    <span class="en">Contact</span>
-                    <span class="zh">联系我们</span>
+                <a href="javascript:;" class="navs_effect last">
+                    <span>
+                        <b>Contact</b>
+                        <i>联系我们</i>
+                    </span>
                 </a>
             </div>
         </div>
@@ -69,15 +74,15 @@
 <div class="page page1">
     <div id="J_banner" class="banner">
         <ul class="banner_slider">
-            <li class="banner_1 banner_li" style="background-image: url(images/slider/1.jpg)">
-                <div class="banner_inner">
+            <li class="banner_1 banner_li">
+                <div class="banner_inner ">
                     <div class="sun"></div>
                     <div class="cloud2 b31"></div>
                     <div class="cloud b32"></div>
                 </div>
             </li>
-            <li class="banner_2 banner_li" style="background-image: url(images/slider/2.jpg)">
-                <div id="J_flash" class="banner_flash" >
+            <li class="banner_2 banner_li">
+                <div id="J_flash" class="banner_inner banner_flash" >
                     <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1080" height="200" id="J_game" align="middle">
                         <param name="movie" value="images/flash/slider.swf" />
 
@@ -95,7 +100,7 @@
             <li class="banner_3 banner_li">
                 <div class="banner_inner">
                     <div class="banner_3tit"></div>
-                    <div id="J_map" class="map">
+                    <div id="J_map" class="map" data-lazy="images/slider/3_1.jpg">
                         <b class="map_city benelux">BENELUX</b>
                         <b class="map_city france">FRANCE</b>
                         <b class="map_city bulgaria">BULGARIA</b>
@@ -112,40 +117,40 @@
                     <div id="J_scroll" class="scroll">
                         <ul id="J_scrollList" class="scroll_list clear">
                             <li class="grow selected" data-city="benelux">
-                                <img src="images/city/1.jpg" alt="图片名称" />
+                                <img data-lazy="images/city/1.jpg" src="images/loading.jpg" alt="图片名称" />
                             </li>
                             <li class="grow" data-city="france">
-                                <img src="images/city/2.jpg" alt="图片名称" />
+                                <img data-lazy="images/city/2.jpg" src="images/loading.jpg" alt="图片名称" />
                             </li>
                             <li class="grow"  data-city="bulgaria">
-                                <img src="images/city/3.jpg" alt="图片名称" />
+                                <img data-lazy="images/city/3.jpg" src="images/loading.jpg" alt="图片名称" />
                             </li>
                             <li class="grow" data-city="turkey">
-                                <img src="images/city/4.jpg" alt="图片名称" />
+                                <img data-lazy="images/city/4.jpg" src="images/loading.jpg" alt="图片名称" />
                             </li>
                             <li class="grow" data-city="china">
-                                <img src="images/city/5.jpg" alt="图片名称" />
+                                <img data-lazy="images/city/5.jpg" src="images/loading.jpg" alt="图片名称" />
                             </li>
                             <li class="grow" data-city="japan">
-                                <img src="images/city/6.jpg" alt="图片名称" />
+                                <img data-lazy="images/city/6.jpg" src="images/loading.jpg" alt="图片名称" />
                             </li>
                             <li class="grow selected" data-city="benelux">
-                                <img src="images/city/7.jpg" alt="图片名称" />
+                                <img data-lazy="images/city/7.jpg" src="images/loading.jpg" alt="图片名称" />
                             </li>
                             <li class="grow" data-city="france">
-                                <img src="images/city/8.jpg" alt="图片名称" />
+                                <img data-lazy="images/city/8.jpg" src="images/loading.jpg" alt="图片名称" />
                             </li>
                             <li class="grow" data-city="bulgaria">
-                                <img src="images/city/9.jpg" alt="图片名称" />
+                                <img data-lazy="images/city/9.jpg" src="images/loading.jpg" alt="图片名称" />
                             </li>
                             <li class="grow" data-city="turkey">
-                                <img src="images/city/10.jpg" alt="图片名称" />
+                                <img data-lazy="images/city/10.jpg" src="images/loading.jpg" alt="图片名称" />
                             </li>
                             <li class="grow" data-city="china">
-                                <img src="images/city/11.jpg" alt="图片名称" />
+                                <img data-lazy="images/city/11.jpg" src="images/loading.jpg" alt="图片名称" />
                             </li>
                             <li class="grow" data-city="japan">
-                                <img src="images/city/12.jpg" alt="图片名称" />
+                                <img data-lazy="images/city/12.jpg" src="images/loading.jpg" alt="图片名称" />
                             </li>
                         </ul>
                     </div>
@@ -204,15 +209,15 @@
             </div>
         </div>
         <div class="pro_bd">
-            <div class="pro_cnt">
-                <img src="images/nav1.png" alt="图片名称" />
+            <div id="J_proList" class="pro_cnt">
+                <img data-lazy="images/nav1.png" alt="图片名称" />
                 <ul class="pro_list clear">
                     <li>
                         <div class="pro_info">
-                            <img src="images/goods.jpg" alt="图片名称" />
+                            <img data-lazy="images/goods.jpg" src="" alt="图片名称" />
                             <h4 class="pro_stit">Meal plate with Lid</h4>
                             <h4 class="pro_stit">玉米餐具玉米餐具</h4>
-                            <b class="b2 J_pop"></b>
+                            <b class="b2 J_pop rotate effeckt-modal-button" data-effeckt-target="#J_proModal" data-effeckt-type="flip-vertical-3D"></b>
                         </div>
                         <div class="pro_action clear">
                             <a class="pro_link b17" href="javascript:;"><span class="hide">网店链接</span></a>
@@ -224,10 +229,10 @@
                     </li>
                     <li>
                         <div class="pro_info">
-                            <img src="images/goods.jpg" alt="图片名称" />
+                            <img data-lazy="images/goods.jpg" src="images/loading.jpg" alt="图片名称" />
                             <h4 class="pro_stit">Meal plate with Lid</h4>
                             <h4 class="pro_stit">玉米餐具玉米餐具</h4>
-                            <b class="b2 J_pop"></b>
+                            <b class="b2 J_pop rotate"></b>
                         </div>
                         <div class="pro_action clear">
                             <a class="pro_link b17" href="javascript:;"><span class="hide">网店链接</span></a>
@@ -239,10 +244,10 @@
                     </li>
                     <li>
                         <div class="pro_info">
-                            <img src="images/goods.jpg" alt="图片名称" />
+                            <img data-lazy="images/goods.jpg" src="images/loading.jpg" alt="图片名称" />
                             <h4 class="pro_stit">Meal plate with Lid</h4>
                             <h4 class="pro_stit">玉米餐具玉米餐具</h4>
-                            <b class="b2 J_pop"></b>
+                            <b class="b2 J_pop rotate"></b>
                         </div>
                         <div class="pro_action clear">
                             <a class="pro_link b17" href="javascript:;"><span class="hide">网店链接</span></a>
@@ -254,10 +259,10 @@
                     </li>
                     <li>
                         <div class="pro_info">
-                            <img src="images/goods.jpg" alt="图片名称" />
+                            <img data-lazy="images/goods.jpg" src="images/loading.jpg" alt="图片名称" />
                             <h4 class="pro_stit">Meal plate with Lid</h4>
                             <h4 class="pro_stit">玉米餐具玉米餐具</h4>
-                            <b class="b2 J_pop"></b>
+                            <b class="b2 J_pop rotate"></b>
                         </div>
                         <div class="pro_action clear">
                             <a class="pro_link b17" href="javascript:;"><span class="hide">网店链接</span></a>
@@ -269,10 +274,10 @@
                     </li>
                     <li>
                         <div class="pro_info">
-                            <img src="images/goods.jpg" alt="图片名称" />
+                            <img data-lazy="images/goods.jpg" src="images/loading.jpg" alt="图片名称" />
                             <h4 class="pro_stit">Meal plate with Lid</h4>
                             <h4 class="pro_stit">玉米餐具玉米餐具</h4>
-                            <b class="b2 J_pop"></b>
+                            <b class="b2 J_pop rotate"></b>
                         </div>
                         <div class="pro_action clear">
                             <a class="pro_link b17" href="javascript:;"><span class="hide">网店链接</span></a>
@@ -284,10 +289,10 @@
                     </li>
                     <li>
                         <div class="pro_info">
-                            <img src="images/goods.jpg" alt="图片名称" />
+                            <img data-lazy="images/goods.jpg" src="images/loading.jpg" alt="图片名称" />
                             <h4 class="pro_stit">Meal plate with Lid</h4>
                             <h4 class="pro_stit">玉米餐具玉米餐具</h4>
-                            <b class="b2 J_pop"></b>
+                            <b class="b2 J_pop rotate"></b>
                         </div>
                         <div class="pro_action clear">
                             <a class="pro_link b17" href="javascript:;"><span class="hide">网店链接</span></a>
@@ -299,10 +304,10 @@
                     </li>
                     <li>
                         <div class="pro_info">
-                            <img src="images/goods.jpg" alt="图片名称" />
+                            <img data-lazy="images/goods.jpg" src="images/loading.jpg" alt="图片名称" />
                             <h4 class="pro_stit">Meal plate with Lid</h4>
                             <h4 class="pro_stit">玉米餐具玉米餐具</h4>
-                            <b class="b2 J_pop"></b>
+                            <b class="b2 J_pop rotate"></b>
                         </div>
                         <div class="pro_action clear">
                             <a class="pro_link b17" href="javascript:;"><span class="hide">网店链接</span></a>
@@ -314,10 +319,10 @@
                     </li>
                     <li>
                         <div class="pro_info">
-                            <img src="images/goods.jpg" alt="图片名称" />
+                            <img data-lazy="images/goods.jpg" src="images/loading.jpg" alt="图片名称" />
                             <h4 class="pro_stit">Meal plate with Lid</h4>
                             <h4 class="pro_stit">玉米餐具玉米餐具</h4>
-                            <b class="b2 J_pop"></b>
+                            <b class="b2 J_pop rotate"></b>
                         </div>
                         <div class="pro_action clear">
                             <a class="pro_link b17" href="javascript:;"><span class="hide">网店链接</span></a>
@@ -329,10 +334,10 @@
                     </li>
                     <li>
                         <div class="pro_info">
-                            <img src="images/goods.jpg" alt="图片名称" />
+                            <img data-lazy="images/goods.jpg" src="images/loading.jpg" alt="图片名称" />
                             <h4 class="pro_stit">Meal plate with Lid</h4>
                             <h4 class="pro_stit">玉米餐具玉米餐具</h4>
-                            <b class="b2 J_pop"></b>
+                            <b class="b2 J_pop rotate"></b>
                         </div>
                         <div class="pro_action clear">
                             <a class="pro_link b17" href="javascript:;"><span class="hide">网店链接</span></a>
@@ -365,56 +370,66 @@
         <div class="about_bd">
             <div class="cert">
                 <h4 class="cert_tit b18"><span class="hide">认证证书</span></h4>
-                <div class="cert_cnt">
+                <div id="J_cert" class="cert_cnt">
                     <ul class="cert_list cert_list4 clear">
                         <li>
-                            <img src="images/certificate/1.jpg" alt="图片名称" />
-                            <a class="cert_view b5" href="javascript:;"><span class="hide">点击查看</span></a>
+                            <a class="cert_img effeckt-modal-button" data-effeckt-type="flip-horizontal-3D" href="images/certificate/s1.jpg" ><img data-lazy="images/certificate/1.jpg" src="images/loading.jpg" alt="FFC Certificate" /></a>
+                            <a class="cert_view b5 effeckt-modal-button" data-effeckt-type="flip-horizontal-3D" href="images/certificate/s1.jpg"><span class="hide">点击查看</span></a>
                             <p class="cert_stit">FFC Certificate</p>
                             <div class="cert_no">(No. 100-027811)</div>
                         </li>
                         <li>
-                            <img src="images/certificate/2.jpg" alt="图片名称" />
-                            <a class="cert_view b5" href="javascript:;"><span class="hide">点击查看</span></a>
+                            <a href="images/certificate/s2.jpg" class=" cert_img effeckt-modal-button" data-effeckt-type="flip-horizontal-3D">
+                                <img data-lazy="images/certificate/2.jpg" src="images/loading.jpg" alt="FFC Certificate for Microwave" />
+                            </a>
+                            <a class="cert_view b5 effeckt-modal-button" data-effeckt-type="flip-horizontal-3D" href="images/certificate/s2.jpg"><span class="hide">点击查看</span></a>
                             <p class="cert_stit">FFC Certificate for Microwave</p>
                             <div class="cert_no"> (No. 100-041352)</div>
                         </li>
                         <li>
-                            <img src="images/certificate/3.jpg" alt="图片名称" />
-                            <a class="cert_view b5" href="javascript:;"><span class="hide">点击查看</span></a>
+                            <a href="images/certificate/s3.jpg" class="cert_img effeckt-modal-button" data-effeckt-type="flip-horizontal-3D">
+                                <img data-lazy="images/certificate/3.jpg" src="images/loading.jpg" alt="Heat-Resistance Test Report" />
+                            </a>
+                            <a class="cert_view b5 effeckt-modal-button" data-effeckt-type="flip-horizontal-3D" href="images/certificate/s3.jpg"><span class="hide">点击查看</span></a>
                             <p class="cert_stit">Heat-Resistance Test Report<br>
                                 onJISS2029 Microwave Oven
                                 </p>
                             <div class="cert_no">(No. T-11000479-001)</div>
                         </li>
                         <li>
-                            <img src="images/certificate/4.jpg" alt="图片名称" />
-                            <a class="cert_view b5" href="javascript:;"><span class="hide">点击查看</span></a>
+                            <a href="images/certificate/s4.jpg" class="cert_img effeckt-modal-button" data-effeckt-type="flip-horizontal-3D">
+                            <img data-lazy="images/certificate/4.jpg" src="images/loading.jpg" alt="CE Certificate" />
+                            </a>
+                            <a class="cert_view b5 effeckt-modal-button" data-effeckt-type="flip-horizontal-3D" href="images/certificate/s4.jpg"><span class="hide">点击查看</span></a>
                             <p class="cert_stit">CE Certificate</p>
                             <div class="cert_no">(No. K5723/T13)</div>
                         </li>
                     </ul>
                     <ul class="cert_list cert_list3 clear">
                         <li>
-                            <img src="images/certificate/5.jpg" alt="图片名称" />
-                            <a class="cert_view b5" href="javascript:;"><span class="hide">点击查看</span></a>
-                            <p class="cert_stit">Safety Test Report
-                                on design Ink <br/>
+                            <a href="images/certificate/s5.jpg" class="cert_img effeckt-modal-button" data-effeckt-type="flip-horizontal-3D">
+                            <img data-lazy="images/certificate/5.jpg" src="images/loading.jpg" alt="Safety Test Report" />
+                            </a>
+                            <a class="cert_view b5 effeckt-modal-button" data-effeckt-type="flip-horizontal-3D" href="images/certificate/s5.jpg"><span class="hide">点击查看</span></a>
+                            <p class="cert_stit">Safety Test Report<br/>
+                                on design Ink
                                 </p>
                             <div class="cert_no">(No. TAE-003447)</div>
                         </li>
                         <li>
-                            <img src="images/certificate/6.jpg" alt="图片名称" />
-                            <a class="cert_view b5" href="javascript:;"><span class="hide">点击查看</span></a>
-                            <p class="cert_stit">SGS Test Report on Silicone
-                                </p>
+                            <a href="images/certificate/s6.jpg" class="cert_img effeckt-modal-button" data-effeckt-type="flip-horizontal-3D">
+                            <img data-lazy="images/certificate/6.jpg" src="images/loading.jpg" alt="图片名称" />
+                            </a>
+                            <a class="cert_view b5 effeckt-modal-button" data-effeckt-type="flip-horizontal-3D" href="images/certificate/s6.jpg"><span class="hide">点击查看</span></a>
+                            <p class="cert_stit">SGS Test Report on Silicone</p>
                             <div class="cert_no">(No. F690501/LF-CTSAYAA11-01463)</div>
                         </li>
                         <li>
-                            <img src="images/certificate/7.jpg" alt="图片名称" />
-                            <a class="cert_view b5" href="javascript:;"><span class="hide">点击查看</span></a>
-                            <p class="cert_stit">Non-GMO Certificate
-                                </p>
+                            <a href="images/certificate/s7.jpg" class="cert_img effeckt-modal-button" data-effeckt-type="flip-horizontal-3D">
+                            <img data-lazy="images/certificate/7.jpg" src="images/loading.jpg" alt="Non-GMO Certificate" />
+                            </a>
+                            <a class="cert_view b5 effeckt-modal-button" data-effeckt-type="flip-horizontal-3D" href="images/certificate/s7.jpg"><span class="hide">点击查看</span></a>
+                            <p class="cert_stit">Non-GMO Certificate</p>
                             <div class="cert_no">(No. CF05622)</div>
                         </li>
                     </ul>
@@ -425,14 +440,14 @@
                 <h4 class="media_hd b8"><span class="hide">媒体报道</span></h4>
                 <div class="media_bd clear">
                     <div class="media_col1">
-                        <img src="images/media/1.jpg" alt=""/>
-                        <img src="images/media/4.jpg" alt=""/>
+                        <img data-lazy="images/media/1.jpg" src="images/loading.jpg" alt=""/>
+                        <img data-lazy="images/media/4.jpg" src="images/loading.jpg" alt=""/>
 
                     </div>
                     <div class="media_col2">
-                        <img src="images/media/2.jpg" alt=""/>
-                        <img src="images/media/3.jpg" alt=""/>
-                        <img src="images/media/5.jpg" alt=""/>
+                        <img data-lazy="images/media/2.jpg" src="images/loading.jpg" alt=""/>
+                        <img data-lazy="images/media/3.jpg" src="images/loading.jpg" alt=""/>
+                        <img data-lazy="images/media/5.jpg" src="images/loading.jpg" alt=""/>
                     </div>
                 </div>
             </div>
@@ -448,15 +463,13 @@
         <h3 class="contact_hd b9"><span class="hide">联系我们</span></h3>
         <div class="contact_bd">
             <!--百度地图容器-->
-            <div style="width:846px;height:470px;border:#ccc solid 1px;" id="dituContent"></div>
-            <img src="images/contact/2.jpg" alt=""/>
+            <img data-lazy="images/contact/1.jpg" src="images/loading.jpg" width="816" height="470" alt=""/>
+            <img data-lazy="images/contact/2.jpg" src="images/loading.jpg" width="818" height="516" alt=""/>
         </div>
     </div>
 </div>
 
-<div class="foot" style="background: url(images/foot.jpg) no-repeat; height: 742px;">
-
-</div>
+<div class="foot" data-lazy="images/foot.jpg"></div>
 
 <div id="J_top" class="top">
     <b class="b19 top_bg"></b>
@@ -475,31 +488,75 @@
     </div>
 </div>
 
-<div class="pop" style="display: none">
+
+<script id="J_popTpl" type="text/template">
     <div class="pop_col1">
         <div class="pop_bimg">
-            <img src="http://img.qian-duan-she-ji.us/470" alt="图片名称" />
+            <img class="J_bImg" src="product/demo/1.jpg" alt="图片名称" />
         </div>
-        <div class="pop_simg">
-            <a href="##"><img src="http://img.qian-duan-she-ji.us/100" alt="图片名称" /></a>
-            <a href="##"><img src="http://img.qian-duan-she-ji.us/100" alt="图片名称" /></a>
-            <a href="##"><img src="http://img.qian-duan-she-ji.us/100" alt="图片名称" /></a>
+        <div class="pop_simg clear">
+            <a href="product/demo/2.jpg" class="J_sImg"><img src="product/demo/2.jpg" alt="图片名称" /></a>
+            <a href="product/demo/3.jpg" class="J_sImg"><img src="product/demo/3.jpg" alt="图片名称" /></a>
+            <a href="product/demo/4.jpg" class="J_sImg last"><img src="product/demo/4.jpg" alt="图片名称" /></a>
         </div>
     </div>
     <div class="pop_col2">
+        <h3 class="pop_tit">Meal Plate With Lid</h3>
+        <!--参数-->
+        <div class="pop_vars">
+            <p>Size:2312454</p>
+            <p>Size:2312454</p>
+            <p>Size:2312454</p>
+            <p>Size:2312454</p>
+            <p>Size:2312454</p>
+            <p>Size:2312454</p>
+        </div>
+        <div class="pop_pro">
+            <h4 class="pop_pro_tit">产品优势</h4>
+            <p>不含环境荷尔蒙（BPA）</p>
+            <p>不含环境荷尔蒙（BPA）</p>
+            <p>不含环境荷尔蒙（BPA）</p>
+            <p>不含环境荷尔蒙（BPA）</p>
+        </div>
+        <div class="pop_shop clear">
+            <div class="pop_notice">
+                <img src="http://img.qian-duan-she-ji.us/50" alt="图片名称" />
+                <img src="http://img.qian-duan-she-ji.us/50" alt="图片名称" />
+                <img src="http://img.qian-duan-she-ji.us/50" alt="图片名称" />
+            </div>
+            <div class="pop_go">
+                <a href="##" class="b23 rotate"><span class="hide">JD</span></a>
+                <a href="##" class="b24 rotate"><span class="hide">淘宝</span></a>
+            </div>
+        </div>
+    </div>
+</script>
 
+
+
+<!--证书弹窗-->
+<div class="effeckt-wrap effeckt-modal-wrap noani_cert" id="effeckt-modal-wrap"> <!-- for centering transform -->
+    <div class="effeckt-content effeckt-modal" id="effeckt-modal">
+        <!--弹窗主体内容-->
+        <div class="modal">
+            <div id="J_modalCnt"></div>
+            <a href="javascript:;" class="effeckt-modal-close b22 rotate"><span class="hide">关闭</span></a>
+        </div>
     </div>
 </div>
 
-<div id="J_pop" class="pop">
-    <a id="J_popClose" class="pop_close" href="##"></a>
-</div>
+<!--产品弹窗-->
+<div class="effeckt-wrap effeckt-modal-wrap noani_promodal" id="J_proModal" > <!-- for centering transform -->
+    <div class="effeckt-content effeckt-modal">
+        <!--弹窗主体内容-->
+        <div class="pro_modal">
+            <div id="J_popCnt" class="pop clear">
 
-<div id="J_pop2" class="pop2">
-    <a id="J_popClose2" class="pop_close2" href="##"></a>
+            </div>
+            <a href="javascript:;" class="effeckt-modal-close b22 rotate"><span class="hide">关闭</span></a>
+        </div>
+    </div>
 </div>
-
-<div id="J_popMask" class="pop_mask"></div>
 
 <script src="js/libs/jquery-1.11.1.min.js"></script>
 <script src="js/pui.js"></script>
@@ -507,104 +564,9 @@
 <script src="js/jquery.lazyload.js"></script>
 <script src="js/jquery.slider.js"></script>
 <script src="js/jquery.parallax.js"></script>
+<script src="js/core.js"></script>
+<script src="js/modal.js"></script>
 <script src="js/index.js"></script>
-<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
-<script type="text/javascript">
-    //创建和初始化地图函数：
-    function initMap(){
-        createMap();//创建地图
-        setMapEvent();//设置地图事件
-        addMapControl();//向地图添加控件
-        addMarker();//向地图中添加marker
-    }
 
-    //创建地图函数：
-    function createMap(){
-        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
-        var point = new BMap.Point(116.44697,39.965938);//定义一个中心点坐标
-        map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
-        window.map = map;//将map变量存储在全局
-    }
-
-    //地图事件设置函数：
-    function setMapEvent(){
-        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
-        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
-        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
-        map.enableKeyboard();//启用键盘上下左右键移动地图
-    }
-
-    //地图控件添加函数：
-    function addMapControl(){
-        //向地图中添加缩放控件
-        var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
-        map.addControl(ctrl_nav);
-        //向地图中添加缩略图控件
-        var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
-        map.addControl(ctrl_ove);
-        //向地图中添加比例尺控件
-        var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
-        map.addControl(ctrl_sca);
-    }
-
-    //标注点数组
-    var markerArr = [{title:"EIC",content:"北京市三环东路8号静安中心",point:"116.446948|39.965986",isOpen:1,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
-    ];
-    //创建marker
-    function addMarker(){
-        for(var i=0;i<markerArr.length;i++){
-            var json = markerArr[i];
-            var p0 = json.point.split("|")[0];
-            var p1 = json.point.split("|")[1];
-            var point = new BMap.Point(p0,p1);
-            var iconImg = createIcon(json.icon);
-            var marker = new BMap.Marker(point,{icon:iconImg});
-            var iw = createInfoWindow(i);
-            var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
-            marker.setLabel(label);
-            map.addOverlay(marker);
-            label.setStyle({
-                borderColor:"#808080",
-                color:"#333",
-                cursor:"pointer"
-            });
-
-            (function(){
-                var index = i;
-                var _iw = createInfoWindow(i);
-                var _marker = marker;
-                _marker.addEventListener("click",function(){
-                    this.openInfoWindow(_iw);
-                });
-                _iw.addEventListener("open",function(){
-                    _marker.getLabel().hide();
-                })
-                _iw.addEventListener("close",function(){
-                    _marker.getLabel().show();
-                })
-                label.addEventListener("click",function(){
-                    _marker.openInfoWindow(_iw);
-                })
-                if(!!json.isOpen){
-                    label.hide();
-                    _marker.openInfoWindow(_iw);
-                }
-            })()
-        }
-    }
-    //创建InfoWindow
-    function createInfoWindow(i){
-        var json = markerArr[i];
-        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
-        return iw;
-    }
-    //创建一个Icon
-    function createIcon(json){
-        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
-        return icon;
-    }
-
-    initMap();//创建和初始化地图
-</script>
 </body>
 </html>
