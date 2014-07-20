@@ -1,0 +1,24 @@
+@import url('fileuploader.css');
+*{margin: 0; padding: 0}
+.e_imgs{ width: 1000px;}
+.e_imgs li{display: inline-block; margin:10px 10px 10px 0; border: 1px solid #ccc; position: relative}
+.e_imgs img{ width: 300px; height: 200px;}
+.e_imgs .close{position: absolute; top: 0; right: 3px;}
+.e_upload{margin-top: 10px;}
+.e_info{padding: 20px;}
+.e_nav .active a{position: relative;
+    z-index: 2;
+    padding: 9px 15px;
+    border: 0;
+    text-shadow: 0 1px 0 rgba(0,0,0,.15);
+    background-color: #08C !important;
+    color: #fff;
+    -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+    -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+    box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);}
+
+.e_pro_img{display: inline-block; margin-right: 0;}
+.e_pro_img img{ width: 80px; height: 80px;}
+.e_tb_ico{display: block; background: url("../../imgs/b4.png") no-repeat; width: 41px; height: 40px;}
+.e_jd_ico{display: block; background: url("../../imgs/b3.png") no-repeat; width: 41px; height: 40px;}
+.e_btn{margin-left: 10px;}

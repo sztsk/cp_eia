@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>产品列表</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/admin.css"/>
+</head>
+<body>
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="product.html">添加产品</a>
+            </li>
+            <li class="active">
+                <a href="list.html">产品列表</a>
+            </li>
+        </ul>
+    </div><!-- /.container -->
+</nav>
+
+<div class="container-fluid e_container">
+    <div class="row">
+        <div class="col-md-2">
+            <ul id="J_cate" class="nav navbar-collapse collapse e_nav">
+                <li class="active" data-id="1">
+                    <a href="list.html?id=1"><i class="glyphicon glyphicon-chevron-right"></i> MOTHERS CORN</a>
+                </li>
+                <li data-id="2">
+                    <a href="list.html?id=2"><i class="glyphicon glyphicon-chevron-right"></i> BABY</a>
+                </li>
+                <li data-id="3">
+                    <a href="list.html?id=3"><i class="glyphicon glyphicon-chevron-right"></i> KITCHEN</a>
+                </li>
+                <li data-id="4">
+                    <a href="list.html?id=4"><i class="glyphicon glyphicon-chevron-right"></i> BABBLES</a>
+                </li>
+                <li data-id="5">
+                    <a href="list.html?id=5"><i class="glyphicon glyphicon-chevron-right"></i> Bis-Kit</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-10">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="text-muted bootstrap-admin-box-title">产品列表</div>
+                </div>
+                <div class="bootstrap-admin-panel-content">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>中文名</th>
+                            <th>英文名</th>
+                            <th>参数</th>
+                            <th>优势信息</th>
+                            <th>淘宝链接</th>
+                            <th>京东链接</th>
+                            <th>产品图</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody id="J_proList">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script id="J_tplItem" type="text/template">
+    <% $.each(items,function(key,data){ %>
+    <tr>
+        <td><%= (key+1) %></td>
+        <td><%= data.pro_name %></td>
+        <td><%= data.pro_name_en %></td>
+        <td><%= data.pro_vars %></td>
+        <td><%= data.pro_info %></td>
+        <td>
+            <a class="e_tb_ico" target="_blank" href="<%= data.pro_tb %>"><span class="hide">淘宝</span></a>
+        </td>
+        <td>
+            <a class="e_jd_ico" target="_blank" href="<%= data.pro_tb %>"><span class="hide">淘宝</span></a>
+        </td>
+        <td>
+            <% for(var i =0,len=data.pro_imgs.length; i<len;i++) { %>
+            <a href="../product/<%= data.pro_imgs[i] %>" target="_blank" class="e_pro_img" ><img src="../product/<%= data.pro_imgs[i] %>" class="img-thumbnail" /></a>
+            <% } %>
+        </td>
+        <td class="actions">
+            <a href="product_eidt.html?id=<%= data.pro_id %>" class="btn btn-sm btn-primary">
+                <i class="glyphicon glyphicon-pencil"></i>
+                修改
+            </a>
+            <button class="btn btn-sm btn-danger">
+                <i class="glyphicon glyphicon-trash"></i>
+                删除
+            </button>
+        </td>
+    </tr>
+    <% }) %>
+
+</script>
+
+<script src="../js/libs/jquery-1.11.1.min.js"></script>
+<script src="../js/pui.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/fileuploader.js"></script>
+<script src="../js/common.js"></script>
+<script src="js/list.js"></script>
+</body>
+</html>

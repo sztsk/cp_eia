@@ -83,6 +83,7 @@
       //hugo add 判定是否支持transition
       if(!suportAni){
           this.showModal();
+
           return;
       }
     // check if the effeckt class is already added

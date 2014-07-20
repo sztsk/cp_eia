@@ -11,56 +11,6 @@
         isIE6 = !-[1,]&&!window.XMLHttpRequest,
 //        ltIE8 = P.detector.browser === 'ie' && P.detector.version < 8,
         scrollDom = (P.detector.engine === 'webkit') ? "body": "html";
-    /**
-     * 获取URL参数
-     * //example getUrlParam('id') or getUrlParam('id','#')
-     */
-    var getUrlParam = function(){
-        var url = top.window.location.href;
-        var u, params, StrBack = '', gg;
-        if (arguments[arguments.length - 1] == "#")
-            u = url.split("#");
-        else
-            u = url.split("?");
-        if (u.length == 1)
-            params = '';
-        else
-            params = u[1];
-
-        if (params != '') {
-            gg = params.split("&");
-            var MaxI = gg.length;
-            str = arguments[0] + "=";
-            for (i = 0; i < MaxI; i++) {
-                if (gg[i].indexOf(str) == 0) {
-                    StrBack = gg[i].replace(str, "");
-                    break;
-                }
-            }
-        }
-        return StrBack;
-    };
-
-
-    /**
-     * 设置URL参数
-     *  设置URL参数,For Hash
-     */
-    var setUrlParam = function(param,value) {
-        var hash = window.location.hash;
-        if (hash && hash != "#") {
-            var p_val = getUrlParam(param, "#");
-            if (p_val) {
-                hash = hash.replace(param + "=" + p_val, param + "=" + value);
-                window.location.hash = hash;
-            } else {
-                hash = hash + "&" + param + "=" + value;
-                window.location.hash = hash;
-            }
-        } else {
-            window.location.hash = param + "=" + value;
-        }
-    };
 
     P.widget('pp.scrollnav',{
 
@@ -84,7 +34,8 @@
             var cssSlide = this.$el.attr('data-snav');
             cssSlide && ( this.options.cssSlide = cssSlide );
             // 将所有屏数的坐标值存进数组
-            this.offsets = this.getPageOffset();
+            this.reset();
+//            this.offsets = this._getPageOffset();
 //            this.offsets = [743,1749,3546,6392];
             // 获取插件目前所在的位置（用于IE6无法使用fiexd的设置）
             this.top = this.$el.offset().top;
@@ -166,7 +117,7 @@
             //已经当前页  || 当前正在动画中
             if (that.isAnimating) return;
 
-        
+
             s_top = that.offsets[idx];      // 获取当前屏数的坐标值 s_  实际就是select_ 即选中的
 
             that.curIndex = idx;
@@ -220,14 +171,14 @@
         /**
          * 获取所有页面片的偏移量数据
          */
-        getPageOffset : function(){
+        _getPageOffset : function(){
             var arr = [],
                 that = this;
             $(this.options.cssSlide).each(function(i){
                 var $this = $(this),
                     top = $this.offset().top + that.options.offset;
                 if(i==0){
-                    top = $this.offset().top -110 ;
+                    top = $this.offset().top -140 ;
                 }
 //                console.log(top);
                 
@@ -260,10 +211,13 @@
                     index: +idx
                 });
             }
+        },
 
-
-
-
+        /**
+         * 重新更新索引
+         */
+        reset : function(){
+            this.offsets = this._getPageOffset();
         }
 
 

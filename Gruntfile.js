@@ -12,7 +12,7 @@ module.exports = function (grunt) {
 
 
     //各自文件夹的任务,'watch:build'
-    grunt.registerTask('default','全自动CSS、JS 压缩 合并 生成文件到build文件夹',['clean','concat:build', 'uglify', 'css_combo','copy']);
+    grunt.registerTask('default','全自动CSS、JS 压缩 合并 生成文件到build文件夹',['concat', 'uglify', 'css_combo']);
 
 
 
@@ -42,7 +42,7 @@ module.exports = function (grunt) {
             },
             build: {
                 src: ['js/*.js'],
-                dest: 'build/js/all.full.js'  //eg: index/build/js/index.full.js
+                dest: 'js/all.full.js'  //eg: index/build/js/index.full.js
             }
         },
         //JS压缩
@@ -55,7 +55,7 @@ module.exports = function (grunt) {
             //具体任务配置
             build:{
                 src: ['<%= concat.build.dest %>'],
-                dest: 'build/js/all.js'  //eg: index/build/js/index.js
+                dest: 'js/all.min.js'  //eg: index/build/js/index.js
             }
         },
         //CSS压缩
@@ -65,26 +65,42 @@ module.exports = function (grunt) {
                 banner: banner
             },
             files: {
-                'build/css/style.css': ['css/style.css']
-            }
-        },
-        //将images文件夹copy到build目录下
-        copy: {
-            images: {
-                expand: true,
-                cwd: 'images/',           //通过cwd重设复制的相对路径 这样可以去掉目录结构
-                src: '**',
-                dest: 'build/images/',
-                filter: 'isFile'
-            },
-            imgs: {
-                expand: true,
-                cwd: 'imgs/',           //通过cwd重设复制的相对路径 这样可以去掉目录结构
-                src: '**',
-                dest: 'build/imgs/',
-                filter: 'isFile'
+                'css/style.min.css': ['css/style.css']
             }
         }
+
+
+        //将images文件夹copy到build目录下
+//        copy: {
+//            images: {
+//                expand: true,
+//                cwd: 'images/',           //通过cwd重设复制的相对路径 这样可以去掉目录结构
+//                src: '**',
+//                dest: 'build/images/',
+//                filter: 'isFile'
+//            },
+//            imgs: {
+//                expand: true,
+//                cwd: 'imgs/',           //通过cwd重设复制的相对路径 这样可以去掉目录结构
+//                src: '**',
+//                dest: 'build/imgs/',
+//                filter: 'isFile'
+//            },
+//            admin: {
+//                expand: true,
+//                cwd: 'admin/',           //通过cwd重设复制的相对路径 这样可以去掉目录结构
+//                src: '**',
+//                dest: 'build/admin/',
+//                filter: 'isFile'
+//            },
+//            product:{
+//                expand: true,
+//                cwd: 'product/',           //通过cwd重设复制的相对路径 这样可以去掉目录结构
+//                src: '**',
+//                dest: 'build/product/',
+//                filter: 'isFile'
+//            }
+//        }
 
     })
 };
