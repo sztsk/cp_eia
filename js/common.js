@@ -90,8 +90,8 @@ Pui.add('rest',function(exports,P){
 
     exports.delProductById = function(pId,params){
         params = params || {};
-        params.url = getUrl("product/" + pId);
-        return baseRest(params,'DELETE');
+        params.url = getUrl("del/" + pId);
+        return baseRest(params,'GET');
     };
 });
 

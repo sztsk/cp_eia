@@ -12,7 +12,7 @@ module.exports = function (grunt) {
 
 
     //各自文件夹的任务,'watch:build'
-    grunt.registerTask('default','全自动CSS、JS 压缩 合并 生成文件到build文件夹',['concat', 'uglify', 'css_combo']);
+    grunt.registerTask('default','全自动CSS、JS 压缩 合并 生成文件到build文件夹',['concat', 'uglify', 'css_combo','cssmin']);
 
 
 
@@ -41,7 +41,7 @@ module.exports = function (grunt) {
                 banner: banner
             },
             build: {
-                src: ['js/*.js'],
+                src: ['js/pui.js','js/jquery.scrollnav.js','js/jquery.lazyload.js','js/jquery.slider.js','js/jquery.parallax.js','js/core.js','js/modal.js','js/common.js','js/index.js'],
                 dest: 'js/all.full.js'  //eg: index/build/js/index.full.js
             }
         },
@@ -65,7 +65,19 @@ module.exports = function (grunt) {
                 banner: banner
             },
             files: {
-                'css/style.min.css': ['css/style.css']
+                src: ['css/style.css'],
+                dest: 'css/style.all.css'  //eg: index/build/js/index.js
+            }
+        },
+
+        cssmin: {
+            //文件头部输出信息
+            options: {
+                banner: banner
+            },
+            files: {
+                src: ['css/style.all.css'],
+                dest: 'css/style.min.css'  //eg: index/build/js/index.js
             }
         }
 

@@ -18,7 +18,7 @@ Pui.add('list',function(exports,P){
     };
 
     exports.init = function(){
-
+        var $list = $('#J_proList');
         $('#J_cate').find('li[data-id="'+ cateId +'"]').addClass('active').siblings('li').removeClass('active');
 
         Rest.getProducts(cateId).done(function(data){
@@ -35,7 +35,20 @@ Pui.add('list',function(exports,P){
                 data[i].pro_info = changeLine(data[i].pro_info);
             }
 
-            $('#J_proList').html(P.tmpl(tpl,{items:data}))
+            $list.html(P.tmpl(tpl,{items:data}))
+        })
+
+        //删除
+        $list.on('click','.J_delItem',function(){
+            var $this = $(this),
+                id = $this.attr('data-id');
+            if(confirm('你确认要删除该产品吗？')){
+                Rest.delProductById(id).done(function(){
+                    $this.closest('tr').fadeOut(500,function(){
+                        $(this).remove();
+                    })
+                })
+            }
         })
     }
 });

@@ -88,7 +88,7 @@ $app->put('/product/:id',function($id){
     }
 });
 
-$app->delete('/product/:id',function($id){
+$app->get('/del/:id',function($id){
     $sql= "UPDATE  `tb_product` SET  `pro_status` =  '0' WHERE  `tb_product`.`pro_id` =$id";
     try {
         $db = getConnection();

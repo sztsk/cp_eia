@@ -302,6 +302,7 @@ a:hover{text-decoration:underline}
 
         .pop_shop{margin: 10px 0;}
         .pop_notice{ float: left;}
+        .pop_notice img{margin-right: 5px;}
         .pop_go{ float: right; margin: 8px 5px 0 0;}
         .pop_go a{display: inline-block; margin-right: 5px; }
 
