@@ -24,10 +24,25 @@ a:hover{text-decoration:underline}
 .header{height: 1030px; background: url("../images/bg.jpg") no-repeat; background-size: cover; position: relative;overflow: hidden;}
 .header_ico{position: absolute; right: 30px; bottom: 30px; }
 .header_nav{ position: absolute; bottom: 0; left: 50%; margin-left: -481px; z-index: 100;}
-.header_nav_inner{margin: 0 60px; overflow: hidden;}
-.header_nav a{ width: 208px; height: 65px; line-height: 65px; text-align: center; float: left;display: block; color: #fff; font-size: 20px;position: relative; top: 0; -webkit-transition:all 0.5s ease-out; -moz-transition:all 0.5s ease-out; }
-.header_nav a:hover{top: -65px; text-decoration: none;text-shadow:0 0 8px rgba(255,255,255,0.7);}
-.header_nav span{display: block;}
+.header_nav_inner{margin: 0 60px; }
+/*.header_nav .header_flip{ width: 208px; height: 65px; line-height: 65px; text-align: center; float: left;display: block; color: #fff; font-size: 20px;position: relative; top: 0; -webkit-transition:opacity 0.5s ease-out; -moz-transition:opacity 0.5s ease-out; }*/
+/*.header_nav a:hover{top: -65px; text-decoration: none;text-shadow:0 0 8px rgba(255,255,255,0.7);}*/
+/*.header_nav span{display: block;}*/
+/*.header_nav .en{opacity: 1}*/
+/*.header_nav .zh{opacity: 0}*/
+/*.header_nav a:hover .en{opacity: 0}*/
+/*.header_nav a:hover .zh{opacity: 1}*/
+.header_nav_inner b{ width: 205px; height: 65px; line-height: 65px; font-weight: 400; display: block; color: #fff; font-size: 20px; text-align: center; }
+.header_nav_inner .flip,
+.header_nav_inner .flip_item{width: 205px; height: 65px; margin:0}
+.header_nav_inner .pro_nav{float: none; width: auto; height: 65px;}
+.header_nav_inner .flip:hover .flip_back{-webkit-transform:rotateY(0deg);-moz-transform:rotateY(0deg);text-shadow:0 0 8px rgba(255,255,255,0.7);}
+/*向下兼容*/
+.notransitions .header_nav_inner a:hover{text-decoration: none;}
+.notransitions .header_nav_inner .flip .flip_back{display: none}
+.notransitions .header_nav_inner .flip .flip_front{display: block;}
+.notransitions .header_nav_inner .flip:hover .flip_back{display: block}
+.notransitions .header_nav_inner .flip:hover .flip_front{display: none;}
 
 
 /*===== banner =====*/
@@ -61,7 +76,7 @@ a:hover{text-decoration:underline}
     .banner_dot a{display: inline-block; margin-right: 15px;}
     .banner_dot .b41.on{background-position: -247px -129px}
     .banner_dot .b42.on{background-position: -536px -129px}
-    .banner_dot .b43.on{ackground-position: -765px -160px}
+    .banner_dot .b43.on{background-position: -765px -160px}
         .banner_inner{ width: 1002px; position: relative; margin: 0 auto}
         .banner_flash{ width: 1080px; margin: 440px auto 0 auto;}
 
@@ -145,7 +160,7 @@ a:hover{text-decoration:underline}
     /*===== 产品介绍 =====*/
     .pro{ width: 1090px; margin: 0 auto;}
         .pro_tit{ width: 232px; height: 86px; float: left; }
-        .pro_nav{ float: right; width: 635px; height: 115px; -webkit-transform: translateZ(0);}
+        .pro_nav{ float: right; width: 635px; height: 115px;  -webkit-transform: translateZ(0);}
         .pro_nav a{display: inline-block;}
         .pro_list{margin: 30px 0 0 40px; width: 1300px;}
         .pro_list li{ width: 300px; float: left; margin-right: 50px;}
@@ -166,12 +181,12 @@ a:hover{text-decoration:underline}
         .pro_pager a.selected{background: #2aacff; text-decoration: none; }
 
 /*===== 翻转效果 =====*/
-.flip{-webkit-perspective:1000;-webkit-transform-style:preserve-3d;-moz-perspective:1000;-moz-transform-style:preserve-3d; display: inline-block; width: 106px; height: 105px; margin-left: 15px; cursor: pointer;}
+.flip{-webkit-perspective:1000;-webkit-transform-style:preserve-3d;-moz-perspective:1000;-moz-transform-style:preserve-3d; display: inline-block; *display: inline; *zoom: 1; width: 106px; height: 105px; margin-left: 15px; cursor: pointer;}
 .flip:hover .flip_back,
 .flip.selected .flip_back{-webkit-transform:rotateY(0deg);-moz-transform:rotateY(0deg);}
 .flip:hover .flip_front,
 .flip.selected .flip_front{-webkit-transform:rotateY(180deg);-moz-transform:rotateY(180deg);}
-.flip_item img{width: 106px; height: 105px;}
+.flip_item img{width: 105px; height: 105px;}
 .flip_item{-webkit-transition:0.6s;
     -webkit-transform-style:preserve-3d;-ms-transition: .6s; -moz-transition: .6s; -moz-transform: perspective(1000px); -moz-transform-style: preserve-3d; -ms-transform-style: preserve-3d; transition: .6s; transform-style: preserve-3d;position:relative;cursor:pointer; width: 106px; height: 105px;}
 /*.flip_item span{display: block;}*/
